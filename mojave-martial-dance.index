@@ -5,7 +5,7 @@
     <description>Homebrew content pack containing a Bard College: Martial Dance.</description>
     <author>Mojave</author>
     <update version="1.0.0">
-      <file name="subclass-bard-martial-dance.xml" url="REPLACE_WITH_RAW_URL_TO_XML"/>
+      <file name="subclass-bard-martial-dance.xml" url="https://github.com/warrenbess23-ui/college-of-dance-bard/blob/main/mojave-martial-dance.index"/>
     </update>
   </info>
 </index>
