@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<elements>
+  <info>
+    <name>College of Martial Dance</name>
+    <description>Homebrew bard college: Martial Dance (user-provided writeup).</description>
+    <author>Mojave</author>
+    <update version="1.0.0">
+      <date>2026-02-02</date>
+    </update>
+  </info>
+
+  <!-- Archetype (Subclass) -->
+  <element name="College of Martial Dance" type="Archetype" source="Homebrew" id="ID_MOJAVE_ARCHETYPE_BARD_MARTIAL_DANCE">
+    <supports>Bard College</supports>
+    <description>
+      <p>A bard college that blends spellcasting with disciplined movement, unarmored defense, and ally repositioning.</p>
+    </description>
+    <rules>
+      <grant type="Archetype Feature" id="ID_MOJAVE_ARCHETYPE_FEATURE_BARD_MARTIAL_DANCE_3"/>
+      <grant type="Archetype Feature" id="ID_MOJAVE_ARCHETYPE_FEATURE_BARD_CHOREOGRAPHED_MOVEMENTS_3"/>
+      <grant type="Archetype Feature" id="ID_MOJAVE_ARCHETYPE_FEATURE_BARD_LEADING_EVASION_6"/>
+      <grant type="Archetype Feature" id="ID_MOJAVE_ARCHETYPE_FEATURE_BARD_TANDEM_FOOTWORK_6"/>
+      <grant type="Archetype Feature" id="ID_MOJAVE_ARCHETYPE_FEATURE_BARD_IRRESISTIBLE_DANCE_14"/>
+    </rules>
+  </element>
+
+  <!-- Features -->
+  <element name="Martial Dance" type="Archetype Feature" source="Homebrew" id="ID_MOJAVE_ARCHETYPE_FEATURE_BARD_MARTIAL_DANCE_3">
+    <supports>Archetype Feature</supports>
+    <description>
+      <h4>Martial Dance</h4>
+      <p><i>3rd-level College of Martial Dance feature</i></p>
+
+      <p>Since 3rd level, you gain the following benefits:</p>
+      <ul>
+        <li><b>Dancing Spellcaster.</b> If you move more than 5 feet in a turn, then you can cast a spell without using material components or spellcasting focus, but you add the Somatic component to the spell.</li>
+        <li><b>Unarmored Defense.</b> While you are not wearing any armor, your armor class equals 10 + your Dexterity modifier + your Charisma modifier.</li>
+        <li><b>Agile Strikes.</b> When you expend a use of your Bardic Inspiration you can make one unarmed strike as part of that action, bonus action or reaction.</li>
+        <li><b>Bardic Damage.</b> You can use Dexterity instead of Strength for the attack rolls of your unarmed strikes. You can use your Bardic Inspiration die in place of the normal damage of your unarmed strike plus your Dexterity modifier.</li>
+      </ul>
+    </description>
+    <sheet>
+      <description>Gain Dancing Spellcaster, Unarmored Defense (AC = 10 + Dex mod + Cha mod while unarmored), Agile Strikes, and Bardic Damage.</description>
+    </sheet>
+    <rules>
+      <grant type="Feature" id="ID_MOJAVE_INTERNAL_UNARMORED_DEFENSE_MARTIAL_DANCE"/>
+    </rules>
+  </element>
+
+  <!-- Internal helper to express Unarmored Defense in Aurora's sheet (best-effort) -->
+  <element name="Unarmored Defense (Martial Dance)" type="Feature" source="Homebrew" id="ID_MOJAVE_INTERNAL_UNARMORED_DEFENSE_MARTIAL_DANCE">
+    <description>
+      <p>While you are not wearing any armor, your AC equals 10 + your Dexterity modifier + your Charisma modifier.</p>
+      <p><i>Note:</i> Aurora does not always compute custom AC formulas automatically. If it does not, track this AC manually on your sheet.</p>
+    </description>
+  </element>
+
+  <element name="Choreographed Movements" type="Archetype Feature" source="Homebrew" id="ID_MOJAVE_ARCHETYPE_FEATURE_BARD_CHOREOGRAPHED_MOVEMENTS_3">
+    <supports>Archetype Feature</supports>
+    <description>
+      <h4>Choreographed Movements</h4>
+      <p><i>3rd-level College of Martial Dance feature</i></p>
+      <p>When an enemy you can see ends its turn within 5 feet of an ally of yours who is within 60 feet of you, you can use your reaction and spend a Bardic Inspiration die to move up to half your speed. Then roll your Bardic Inspiration die and the ally can move up to a number of feet equal to 5 times the number rolled. None of this feature's movement provokes Opportunity Attacks.</p>
+    </description>
+    <sheet>
+      <description>Reaction + expend Bardic Inspiration: you move up to half speed, then ally moves 5×the die roll (no OA for either movement).</description>
+    </sheet>
+  </element>
+
+  <element name="Leading Evasion" type="Archetype Feature" source="Homebrew" id="ID_MOJAVE_ARCHETYPE_FEATURE_BARD_LEADING_EVASION_6">
+    <supports>Archetype Feature</supports>
+    <description>
+      <h4>Leading Evasion</h4>
+      <p><i>6th-level College of Martial Dance feature</i></p>
+      <p>Since 6th level, when you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail. If any creatures within 10 feet of you are making the same Dexterity saving throw, you can share this benefit with them for that save. You can't use this feature if you have an Incapacitated condition.</p>
+    </description>
+    <sheet>
+      <description>Evasion-style Dex saves; you may extend the benefit to creatures within 10 ft making the same save (not while incapacitated).</description>
+    </sheet>
+  </element>
+
+  <element name="Tandem Footwork" type="Archetype Feature" source="Homebrew" id="ID_MOJAVE_ARCHETYPE_FEATURE_BARD_TANDEM_FOOTWORK_6">
+    <supports>Archetype Feature</supports>
+    <description>
+      <h4>Tandem Footwork</h4>
+      <p><i>6th-level College of Martial Dance feature</i></p>
+      <p>Starting from 6th level, you can spend one of the Bardic Inspiration die to gain you and your allies a bonus to your initiative rolls equal to the roll of the die.</p>
+    </description>
+    <sheet>
+      <description>Expend Bardic Inspiration: you and allies add the die roll to initiative.</description>
+    </sheet>
+  </element>
+
+  <element name="Irresistible Dance" type="Archetype Feature" source="Homebrew" id="ID_MOJAVE_ARCHETYPE_FEATURE_BARD_IRRESISTIBLE_DANCE_14">
+    <supports>Archetype Feature</supports>
+    <description>
+      <h4>Irresistible Dance</h4>
+      <p><i>14th-level College of Martial Dance feature</i></p>
+      <p>Starting from level 14th, you can cast the spell Otto's Irresistible Dance without spending a spell slot. Once it was cast you can't cast it again until you finish a Long rest or spend four uses of your Bardic die inspiration.</p>
+    </description>
+    <sheet>
+      <description>Cast Otto's Irresistible Dance without a slot 1/Long Rest, or by spending 4 uses of Bardic Inspiration.</description>
+    </sheet>
+  </element>
+</elements>
