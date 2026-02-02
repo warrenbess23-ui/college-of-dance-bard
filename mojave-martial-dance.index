@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<index>
+  <info>
+    <name>Mojave Homebrew - College of Martial Dance</name>
+    <description>Homebrew content pack containing a Bard College: Martial Dance.</description>
+    <author>Mojave</author>
+    <update version="1.0.0">
+      <file name="subclass-bard-martial-dance.xml" url="REPLACE_WITH_RAW_URL_TO_XML"/>
+    </update>
+  </info>
+</index>
